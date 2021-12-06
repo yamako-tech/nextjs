@@ -43,7 +43,7 @@ export default function Layout({ children, title = "HP by Nextjs"}) {
         >
           {' '}
           <span className="h-5 ml-2">
-            <Image src="/asktech.svg" alt="asktech Logo" width={180} height={0} />
+            <Image src="/asktech.svg" alt="asktech Logo" width={150} height={70} />
           </span>
         </a>
       </footer>
