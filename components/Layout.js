@@ -10,7 +10,7 @@ export default function Layout({ children, title = "HP by Nextjs"}) {
             </head>
             <header>
                 <nav className="bg-green-800 w-screen">
-                    <div flex items-center pl-8 h-14>
+                    <div className="flex items-center h-14">
                         <div className="flex space-x-4">
                             <Link href="/">
                                 <a className="text-yellow-100 hover:bg-green-500 px-3 py-2 rounded">
@@ -35,18 +35,18 @@ export default function Layout({ children, title = "HP by Nextjs"}) {
                 {children}
             </main>
             <footer className="w-full h-12 flex justify-center items-center border-t">
-        <a
-          className="flex items-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {' '}
-          <span className="h-5 ml-2">
-            <Image src="/asktech.svg" alt="asktech Logo" width={150} height={70} />
-          </span>
-        </a>
-      </footer>
+                <a
+                className="flex items-center"
+                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                {' '}
+                <span className="h-5 ml-2">
+                    <Image src="/asktech.svg" alt="asktech Logo" width={150} height={70} />
+                </span>
+                </a>
+            </footer>
         </div>
     )
 }

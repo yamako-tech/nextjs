@@ -24,7 +24,18 @@ const Contact = () => {
                     <p className="text-xs mt-2 text-green-700">askkyodai@gmail.com</p>
                 </div>
                 <div className="mt-6 flex justify-around">
-                    
+                    <a href="https://twitter.com/t_yamamomo">
+                    <Image src="/twitter.svg" alt="twitter icon" width={20} height={20} />
+                    </a>
+                    <a href="https://www.instagram.com/yamako2222/">
+                    <Image src="/instagram.svg" alt="instagram icon" width={20} height={20} />
+                    </a>
+                    <a href="https://github.com/yamako-tech/">
+                    <Image src="/github.svg" alt="github icon" width={20} height={20} />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCmdIQNlqNMrczJRCeZioiCw">
+                    <Image src="/youtube.svg" alt="youtube icon" width={20} height={20} />
+                    </a>
                 </div>
             </div>
         </Layout>
