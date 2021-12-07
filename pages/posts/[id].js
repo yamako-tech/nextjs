@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import { getAllPostIds, getPostData  } from "../../lib/posts";
+import Image from "next/image";
 
 export default function Post({ post}) {
     if (!post) {
@@ -8,7 +9,7 @@ export default function Post({ post}) {
     }
 
     return <Layout title={post.title}>
-            <div className="bg-yellow-50 text-center shadow-xl p-8 w-200 rounded">
+            <div className="bg-yellow-50 text-center p-8 w-100 rounded">
                 <p className="m-4">
                     {"ID : "}
                     {post.id}
@@ -17,9 +18,9 @@ export default function Post({ post}) {
                 <p className="px-10">{post.body}</p>
             </div>
             <Link href="/blog-page">
-                <div className="flex cursor-pointer ml-12">
-                <Image src="/instagram.svg" alt="instagram icon" width={20} height={20} />
-                <span>Back to Blog List</span>
+                <div className="flex cursor-pointer p-2">
+                <Image src="/arrow.svg" alt="arrow icon" width={20} height={20} />
+                <span className="pl-2">Back to Blog List</span>
                 </div>
             </Link>
     </Layout>;
@@ -34,7 +35,7 @@ export async function getStaticPaths() {
     };
 }
 
-export async function getStaticProps({ paramas }) {
+export async function getStaticProps({ params }) {
     const { post: post } = await getPostData(params.id);
     return {
         props: {
