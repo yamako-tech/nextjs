@@ -17,7 +17,7 @@ export default function Post({ post}) {
                 <p className="mb-8 text-xl font-bold">{post.title}</p>
                 <p className="px-10">{post.body}</p>
             </div>
-            <Link href="/blog-page">
+            <Link href="/blog-page" passHref>
                 <div className="flex cursor-pointer p-2">
                 <Image src="/arrow.svg" alt="arrow icon" width={20} height={20} />
                 <span className="pl-2">Back to Blog List</span>
